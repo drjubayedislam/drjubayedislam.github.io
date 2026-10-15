@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b766e">
+
+  <title>Dr. Jubayed Islam | MBBS</title>
+  <meta name="description"
+        content="Official profile website of Dr. Jubayed Islam, MBBS.">
+
+  <style>
+    :root {
+      --primary: #087f78;
+      --primary-dark: #075b57;
+      --background: #f3f8f7;
+      --text: #172e32;
+      --muted: #64777b;
+      --white: #ffffff;
+      --border: #e0ece9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      color: var(--primary-dark);
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .nav-link {
+      color: var(--primary-dark);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 76px 0 64px;
+      background:
+        radial-gradient(circle at 85% 15%, #c7eee5 0, transparent 30%),
+        linear-gradient(135deg, #f0faf7, #ffffff);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: #dff5ef;
+      color: var(--primary-dark);
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.12;
+      letter-spacing: -1.8px;
+      margin-bottom: 18px;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .degree {
+      color: var(--primary-dark);
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 12px 19px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px #163c391a;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary-dark);
+      border: 1px solid var(--border);
+    }
+
+    .profile-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 20px 55px #174b4010;
+    }
+
+    .avatar {
+      width: 155px;
+      height: 155px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 43px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      background: linear-gradient(145deg, #10a59a, #075b57);
+      border: 7px solid #e7f7f2;
+      box-shadow: 0 0 0 1px #d2eee6;
+    }
+
+    .profile-card h2 {
+      font-size: 23px;
+      margin-bottom: 4px;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .verified-note {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 7px 12px;
+      border-radius: 20px;
+      background: #f0f8f6;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(25px, 4vw, 35px);
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .info-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 25px;
+    }
+
+    .info-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #e3f5f0;
+      color: var(--primary-dark);
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .location-section {
+      background: #eaf5f2;
+    }
+
+    .location-card {
+      max-width: 760px;
+      margin: auto;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .location-card h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .location-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-card {
+      max-width: 760px;
+      margin: auto;
+      padding: 32px;
+      text-align: center;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .contact-card .actions {
+      justify-content: center;
+    }
+
+    footer {
+      padding: 25px 0;
+      background: #102f32;
+      color: #d6e7e4;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer p + p {
+      margin-top: 5px;
+      color: #a8c6c0;
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        min-height: 62px;
+      }
+
+      .brand {
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-copy .actions {
+        justify-content: center;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .profile-card {
+        padding: 26px 20px;
+      }
+
+      .avatar {
+        width: 130px;
+        height: 130px;
+        font-size: 36px;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-card,
+      .location-card,
+      .contact-card {
+        padding: 23px;
+      }
+
+      .btn {
+        flex: 1 1 140px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home">Dr. Jubayed Islam</a>
+      <a class="nav-link" href="#contact">Contact ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Medical Profile</div>
+
+          <h1>Dr. Jubayed <span>Islam</span></h1>
+
+          <p class="subtitle">
+            Medical graduate profile
+          </p>
+
+          <p class="degree">MBBS</p>
+
+          <p class="subtitle">
+            Sylhet MAG Osmani Medical College
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-primary"
+               href="#contact">Contact Me ↗</a>
+
+            <a class="btn btn-secondary"
+               href="#location">View Location</a>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <!-- Replace these initials with a real photo if desired -->
+          <div class="avatar" aria-label="Profile initials">
+            JI
+          </div>
+
+          <h2>Dr. Jubayed Islam</h2>
+          <p>MBBS</p>
+          <p>Sylhet, Bangladesh</p>
+
+          <span class="verified-note">
+            Personal Profile
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Profile Overview</h2>
+          <p>Professional and academic information</p>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <div class="info-icon" aria-hidden="true">🎓</div>
+            <h3>Qualification</h3>
+            <p>MBBS</p>
+          </article>
+
+          <article class="info-card">
+            <div class="info-icon" aria-hidden="true">🏥</div>
+            <h3>Institution</h3>
+            <p>Sylhet MAG Osmani Medical College</p>
+          </article>
+
+          <article class="info-card">
+            <div class="info-icon" aria-hidden="true">📍</div>
+            <h3>Location</h3>
+            <p>Sylhet, Bangladesh</p>
+          </article>
+
+          <article class="info-card">
+            <div class="info-icon" aria-hidden="true">🌐</div>
+            <h3>Connect Online</h3>
+            <p>
+              Use the contact buttons below to connect
+              through your official social profiles.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section" id="location">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Institution & Location</h2>
+          <p>Find Sylhet MAG Osmani Medical College on the map</p>
+        </div>
+
+        <div class="location-card">
+          <h3>Sylhet MAG Osmani Medical College</h3>
+          <p>Sylhet, Bangladesh</p>
+
+          <a class="btn btn-primary"
+             href="https://www.google.com/maps/search/?api=1&query=Sylhet+MAG+Osmani+Medical+College"
+             target="_blank"
+             rel="noopener noreferrer">
+            📍 Open Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Get in Touch</h2>
+          <p>Connect through the links below</p>
+        </div>
+
+        <div class="contact-card">
+          <p>Dr. Jubayed Islam</p>
+          <p>MBBS</p>
+
+          <div class="actions">
+            <!-- Replace the placeholder with your actual number -->
+            <a class="btn btn-primary"
+               href="tel:+8801XXXXXXXXX"
+               data-placeholder="phone">
+              ☎ Call
+            </a>
+
+            <!-- Replace with your actual Facebook profile URL -->
+            <a class="btn btn-secondary"
+               href="https://www.facebook.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               data-placeholder="facebook">
+              Facebook
+            </a>
+
+            <!-- Replace with your Messenger username or page -->
+            <a class="btn btn-secondary"
+               href="https://www.messenger.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               data-placeholder="messenger">
+              Messenger
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Dr. Jubayed Islam</p>
+      <p>Personal profile website</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Warn if contact details still need to be customized.
+    document.querySelectorAll("[data-placeholder]").forEach(
+      function (link) {
+        link.addEventListener("click", function (event) {
+          const type = link.dataset.placeholder;
+          const href = link.getAttribute("href");
+
+          const needsUpdate =
+            (type === "phone" && href.includes("X")) ||
+            (type === "facebook" &&
+              href === "https://www.facebook.com/") ||
+            (type === "messenger" &&
+              href === "https://www.messenger.com/");
+
+          if (needsUpdate) {
+            event.preventDefault();
+            alert(
+              "Please add your actual " + type +
+              " details in index.html first."
+            );
+          }
+        });
+      }
+    );
+  </script>
+</body>
+</html>
